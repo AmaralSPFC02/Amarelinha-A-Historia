@@ -1,82 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Seleções Brasileiras - Protótipo</title>
-    ./styles.css
+    <title>Seleções Brasileiras</title>
   </head>
   <body>
-    <header class="topbar">
-      <h1>🇧🇷 Seleções Brasileiras (Protótipo Semana 1)</h1>
-
-      <div class="controls">
-        <label for="anoSelect">Seleção:</label>
-        <select id="anoSelect"></select>
-      </div>
-    </header>
-
-    <main class="layout">
-      <section class="card">
-        <h2 id="tituloSelecao">Seleção</h2>
-
-        <div class="pitch" id="pitch">
-          <div class="pitch-lines">
-            <div class="center-circle"></div>
-            <div class="half-line"></div>
-            <div class="box top"></div>
-            <div class="box bottom"></div>
-          </div>
-        </div>
-
-        <p class="hint">
-          Dica: clique em um titular para ver foto (Wikipedia) + clube na época.
-        </p>
-      </section>
-
-      <aside class="side">
-        <section class="card">
-          <h3>Reservas</h3>
-          <ul id="reservasList" class="list"></ul>
-        </section>
-
-        <section class="card">
-          <h3>Técnico</h3>
-          <p id="tecnicoText" class="muted">—</p>
-        </section>
-
-        <section class="card">
-          <h3>Status Semana 1</h3>
-          <ul class="list">
-            <li>✅ Campo + escalação</li>
-            <li>✅ Clique abre modal</li>
-            <li>✅ Foto via API externa (Wikipedia)</li>
-            <li>⏳ Login/JWT (Semana 2)</li>
-            <li>⏳ CRUD + backend (Semana 3)</li>
-          </ul>
-        </section>
-      </aside>
-    </main>
-
-    <div id="modalBackdrop" class="modal-backdrop hidden">
-      <div class="modal">
-        <div class="modal-header">
-          <h3 id="modalTitle">Jogador</h3>
-          <button id="modalClose" class="btn">Fechar</button>
-        </div>
-
-        <div class="modal-body">
-          <img id="modalImg" class="modal-img" alt="Foto do jogador" />
-          <div class="modal-info">
-            <p><strong>Posição:</strong> <span id="modalPos"></span></p>
-            <p><strong>Clube na época:</strong> <span id="modalClub"></span></p>
-            <p class="muted" id="modalApiNote"></p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    ./data.jsscript>
-    ./app.jsscript>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
