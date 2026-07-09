@@ -149,27 +149,21 @@ Exemplos:
 
 ---
 
-## 📸 Screenshots
-
-Adicione aqui imagens do projeto antes da entrega.
-
-Sugestões:
-
-```txt
-Tela de login
-Tela de cadastro
-Tela principal com campinho
-Card de jogador
-Criação de seleção personalizada
-Lista de minhas seleções
-```
-
-Exemplo:
-
 ```md
-./screenshots/tela-principal.png
-```
+## 📷 Screenshots
 
+./screenshots/tela-login.jpg
+
+./screenshots/tela-cadastro.jpg
+
+./screenshots/time-esquema.jpg
+
+./screenshots/tela-jogador-selecionado.jpg
+
+./screenshots/banco-reservas.jpg
+
+./screenshots/tela-criacao-selecoes.jpg
+```
 ---
 
 ## 👥 Integrantes
