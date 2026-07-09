@@ -1,11 +1,10 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext.jsx';
+import { api } from '../services/api.js';
 
 export default function RegisterPage() {
   const [form, setForm] = useState({ usuario: '', email: '', senha: '', confirmacaoSenha: '' });
   const [error, setError] = useState('');
-  const { register } = useAuth();
   const navigate = useNavigate();
   const setField = (field, value) => setForm((old) => ({ ...old, [field]: value }));
 
@@ -13,8 +12,8 @@ export default function RegisterPage() {
     event.preventDefault();
     setError('');
     try {
-      await register(form);
-      navigate('/');
+      await api.register(form);
+      navigate('/login');
     } catch (err) {
       setError(err.message);
     }

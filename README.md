@@ -255,4 +255,4 @@ Exemplo:
 - CRUD completo;
 - Persistência em arquivos JSON;
 - Uso de API externa;
-- Projeto versionado em repositório público.
+- Projeto versionado em repositório público

@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "id": "6f1f2b59-94f7-45f6-950d-fdaecf75027e",
+    "usuario": "teste",
+    "email": "teste@gmail.com",
+    "passwordHash": "$2a$10$m.gcifTfBM3SPKOb4Hnwn.hhE/RaFLkq6fNJmYOCOO9JY665PaEc.",
+    "createdAt": "2026-07-08T23:17:18.188Z"
+  }
+]

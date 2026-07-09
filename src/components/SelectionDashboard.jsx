@@ -54,6 +54,7 @@ export default function SelectionDashboard() {
   const [selectedStarter, setSelectedStarter] = useState(null);
   const [form, setForm] = useState(null);
   const [message, setMessage] = useState('');
+  const [editingStats, setEditingStats] = useState(null);
 
   useEffect(() => {
     api.getSelecoesBase().then((data) => {
@@ -84,10 +85,12 @@ export default function SelectionDashboard() {
   function handleStarterClick(player) {
     setSelectedPlayer(player);
     setSelectedStarter(player);
+    setEditingStats(null);
   }
 
   function handleReserveClick(reserve) {
     setSelectedPlayer(reserve);
+    setEditingStats(null);
     if (!selectedStarter || !current) return;
 
     const jogadores = current.jogadores.map((j) => ({ ...j }));
@@ -108,6 +111,26 @@ export default function SelectionDashboard() {
     setCurrent({ ...current, jogadores });
     setSelectedStarter(null);
     setMessage(`${reserve.nome} entrou no lugar de ${selectedStarter.nome}.`);
+  }
+
+  function updatePlayerStats(field, value) {
+    setEditingStats((old) => ({ ...old, [field]: value }));
+    setSelectedPlayer((old) => ({
+      ...old,
+      estatisticasSelecao: { ...old.estatisticasSelecao, [field]: value || null }
+    }));
+  }
+
+  function savePlayerStats() {
+    if (!current || !selectedPlayer) return;
+    const jogadores = current.jogadores.map((j) =>
+      j.nome === selectedPlayer.nome
+        ? { ...selectedPlayer }
+        : j
+    );
+    setCurrent({ ...current, jogadores });
+    setEditingStats(null);
+    setMessage(`Estatísticas de ${selectedPlayer.nome} atualizadas!`);
   }
 
   function updateFormField(field, value) {
@@ -264,9 +287,37 @@ export default function SelectionDashboard() {
               <p><b>Clube:</b> {selectedPlayer.clubeEpoca}</p>
               <p><b>Idade:</b> {selectedPlayer.idadeCopa} anos</p>
               <h4>Números pela Seleção</h4>
-              <p>Jogos: {fmt(selectedPlayer.estatisticasSelecao?.jogos)}</p>
-              <p>Gols: {fmt(selectedPlayer.estatisticasSelecao?.gols)}</p>
-              <p>Assistências: {fmt(selectedPlayer.estatisticasSelecao?.assistencias)}</p>
+              {editingStats ? (
+                <div className="stack-form">
+                  <input
+                    type="number"
+                    placeholder="Jogos"
+                    value={editingStats.jogos || ''}
+                    onChange={(e) => updatePlayerStats('jogos', e.target.value || null)}
+                  />
+                  <input
+                    type="number"
+                    placeholder="Gols"
+                    value={editingStats.gols || ''}
+                    onChange={(e) => updatePlayerStats('gols', e.target.value || null)}
+                  />
+                  <input
+                    type="number"
+                    placeholder="Assistências"
+                    value={editingStats.assistencias || ''}
+                    onChange={(e) => updatePlayerStats('assistencias', e.target.value || null)}
+                  />
+                  <button className="btn btn-primary" onClick={savePlayerStats} type="button">Salvar</button>
+                  <button className="btn" onClick={() => setEditingStats(null)} type="button">Cancelar</button>
+                </div>
+              ) : (
+                <>
+                  <p>Jogos: {fmt(selectedPlayer.estatisticasSelecao?.jogos)}</p>
+                  <p>Gols: {fmt(selectedPlayer.estatisticasSelecao?.gols)}</p>
+                  <p>Assistências: {fmt(selectedPlayer.estatisticasSelecao?.assistencias)}</p>
+                  <button className="btn btn-primary" onClick={() => setEditingStats(selectedPlayer.estatisticasSelecao || {})} type="button">Editar estatísticas</button>
+                </>
+              )}
             </div>
           </section>
         ) : (
