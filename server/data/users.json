@@ -12,5 +12,26 @@
     "email": "tsete@gmail.com",
     "passwordHash": "$2a$10$NiBZv/G2kU5wP9M.LMusuuoFW7eT87QS3aQ2Y3ISDa7kMdlFXNlBC",
     "createdAt": "2026-07-08T23:55:11.695Z"
+  },
+  {
+    "id": "dd22df96-e5ab-4405-a245-2343c0966d8a",
+    "usuario": "amaral",
+    "email": "amaral@gmail.com",
+    "passwordHash": "$2a$10$5VqvcuSL1X89D813G2aRaOT0GRdisxh11jr7alTpO1aNP/FAmCDNa",
+    "createdAt": "2026-07-09T10:28:02.258Z"
+  },
+  {
+    "id": "ba7fde5c-f55f-40cb-b311-a0e4041e99cd",
+    "usuario": "amaral02",
+    "email": "amaral02@gmail.com",
+    "passwordHash": "$2a$10$N37Pk35uT4rryR9lDk.DduEEJA5fvRQrYU7ZZJfgCgjqK/9QxylvK",
+    "createdAt": "2026-07-09T10:28:35.209Z"
+  },
+  {
+    "id": "790787fa-026e-4c2e-8a6a-4cc3d00fd90f",
+    "usuario": "aaa",
+    "email": "aaa@gmail.com",
+    "passwordHash": "$2a$10$hJx0Kbzaxq0yTfJPTbqntejzshugVadfpn71TNglSF2zN.vqNGmGO",
+    "createdAt": "2026-07-09T11:11:20.906Z"
   }
 ]

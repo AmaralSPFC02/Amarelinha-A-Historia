@@ -1,1 +1,422 @@
-*{box-sizing:border-box}:root{--blue:#002776;--green:#009c3b;--yellow:#ffdf00;--card:rgba(4,35,76,.9);--text:#f7fbff}body{margin:0;min-height:100vh;font-family:Arial,Helvetica,sans-serif;color:var(--text);background:radial-gradient(circle at 15% 10%,rgba(255,223,0,.35),transparent 25%),radial-gradient(circle at 85% 0,rgba(0,156,59,.35),transparent 30%),linear-gradient(135deg,#001640,#063d7a 48%,#007a3d)}a{color:#ffdf00}.topbar{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;background:linear-gradient(90deg,#009c3b,#ffdf00 55%,#002776);color:#061b3a;gap:16px}.brand{display:flex;gap:14px;align-items:center}.flag-ball{display:grid;place-items:center;width:42px;height:42px;background:#ffdf00;color:#002776;transform:rotate(45deg);border:4px solid #009c3b}.topbar h1{margin:0}.topbar p{margin:2px 0 0;font-weight:bold}.topbar-actions{display:flex;gap:10px;align-items:center}.layout{display:grid;grid-template-columns:minmax(0,1fr) 390px;gap:18px;padding:18px;max-width:1500px;margin:0 auto}.main-column,.side{display:grid;gap:18px;align-content:start}.card,.hero-card,.auth-card{background:var(--card);border:1px solid rgba(255,223,0,.28);border-radius:24px;padding:18px;box-shadow:0 20px 50px rgba(0,0,0,.25)}.hero-card{display:flex;justify-content:space-between;align-items:center;background:linear-gradient(135deg,rgba(0,156,59,.94),rgba(0,39,118,.92));border:2px solid var(--yellow)}.hero-card h2{font-size:34px;margin:6px 0;color:var(--yellow)}.eyebrow{text-transform:uppercase;letter-spacing:.15em}.controls,.section-heading{display:flex;gap:10px;align-items:center;justify-content:space-between}.btn,input,select{padding:10px 13px;border-radius:12px;border:1px solid rgba(255,255,255,.25)}select,input{background:#061a38;color:white}.btn{background:#062450;color:white;cursor:pointer;text-decoration:none}.btn-primary{background:#002776}.btn-canary{background:#ffdf00;color:#06213f;font-weight:bold}.btn-danger{background:#a11b1b}.success-text{background:rgba(0,156,59,.25);border:1px solid #ffdf00;padding:12px;border-radius:14px}.error-text{color:#fecaca}.muted{opacity:.78}.auth-shell,.screen-center{min-height:80vh;display:grid;place-items:center;padding:20px}.stack-form{display:grid;gap:12px}.pitch{position:relative;width:min(100%,820px);aspect-ratio:3/4;margin:auto;background:repeating-linear-gradient(180deg,#16883c 0 78px,#0f7432 78px 156px);border:5px solid white;border-radius:26px;box-shadow:0 18px 48px rgba(0,0,0,.3)}.pitch-lines{position:absolute;inset:18px;border:3px solid rgba(255,255,255,.82);border-radius:18px}.half-line{position:absolute;left:0;right:0;top:50%;height:3px;background:rgba(255,255,255,.82)}.center-circle{position:absolute;width:150px;height:150px;border:3px solid rgba(255,255,255,.82);border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%)}.box{position:absolute;left:50%;width:56%;height:18%;transform:translateX(-50%);border:3px solid rgba(255,255,255,.82)}.box.top{top:0;border-top:0}.box.bottom{bottom:0;border-bottom:0}.shirt-player{position:absolute;transform:translate(-50%,-50%);border:0;background:transparent;color:white;display:grid;place-items:center;gap:5px;cursor:pointer;z-index:2;min-width:76px}.shirt-player.selected{filter:drop-shadow(0 0 14px #ffdf00);z-index:9}.shirt-body{position:relative;display:grid;place-items:center;width:54px;height:48px;background:#ffdf00;color:#002776;font-weight:900;border:3px solid #0b7f35;border-radius:10px 10px 16px 16px}.sleeve{position:absolute;top:7px;width:20px;height:25px;background:#ffdf00;border:3px solid #0b7f35}.sleeve.left{left:-16px;transform:skewY(25deg)}.sleeve.right{right:-16px;transform:skewY(-25deg)}.shirt-name{background:rgba(0,39,118,.95);border:2px solid var(--yellow);border-radius:999px;padding:3px 8px;font-size:11px;font-weight:bold;white-space:nowrap}.kit-1978 .sleeve:after{content:'';position:absolute;inset:3px 2px;background:repeating-linear-gradient(90deg,#0b7f35 0 3px,transparent 3px 6px)}.kit-2010 .shirt-body:before,.kit-2022 .shirt-body:before{content:'';position:absolute;left:0;top:8px;bottom:8px;width:11px;background:#009c3b}.kit-2010 .shirt-body:after,.kit-2022 .shirt-body:after{content:'';position:absolute;right:0;top:8px;bottom:8px;width:11px;background:#009c3b}.kit-2022 .shirt-body{background:radial-gradient(circle,#ffe84a 0 3px,#ffdf00 4px 100%)}.reserve-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px}.reserve-item{color:white;background:rgba(255,255,255,.08);border:1px solid rgba(255,223,0,.18);border-radius:14px;padding:12px;text-align:left;display:grid;gap:4px;cursor:pointer}.player-details{display:grid;grid-template-columns:120px 1fr;gap:14px}.details-photo{width:120px;height:120px;border-radius:18px;object-fit:cover;border:4px solid var(--yellow)}.temperature{font-size:44px;margin:8px 0;color:var(--yellow);font-weight:900}.saved-item,.mini-card{display:grid;gap:8px;margin-top:10px;padding:12px;border:1px solid rgba(255,255,255,.18);border-radius:14px;background:rgba(255,255,255,.07)}.players-form-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.inline-actions{display:flex;gap:8px;flex-wrap:wrap}@media(max-width:1050px){.layout{grid-template-columns:1fr}.hero-card,.topbar{flex-direction:column;align-items:stretch}}@media(max-width:620px){.player-details{grid-template-columns:1fr}.shirt-name{max-width:70px;overflow:hidden;text-overflow:ellipsis}.layout{padding:10px}}
+* {
+    box-sizing: border-box
+}
+
+:root {
+    --blue: #002776;
+    --green: #009c3b;
+    --yellow: #ffdf00;
+    --card: rgba(4, 35, 76, .9);
+    --text: #f7fbff
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: radial-gradient(circle at 15% 10%, rgba(255, 223, 0, .35), transparent 25%), radial-gradient(circle at 85% 0, rgba(0, 156, 59, .35), transparent 30%), linear-gradient(135deg, #001640, #063d7a 48%, #007a3d)
+}
+
+a {
+    color: #ffdf00
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 24px;
+    background: linear-gradient(90deg, #009c3b, #ffdf00 55%, #002776);
+    color: #061b3a;
+    gap: 16px
+}
+
+.brand {
+    display: flex;
+    gap: 14px;
+    align-items: center
+}
+
+.flag-ball {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    background: #ffdf00;
+    color: #002776;
+    transform: rotate(45deg);
+    border: 4px solid #009c3b
+}
+
+.topbar h1 {
+    margin: 0
+}
+
+.topbar p {
+    margin: 2px 0 0;
+    font-weight: bold
+}
+
+.topbar-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 390px;
+    gap: 18px;
+    padding: 18px;
+    max-width: 1500px;
+    margin: 0 auto
+}
+
+.main-column,
+.side {
+    display: grid;
+    gap: 18px;
+    align-content: start
+}
+
+.card,
+.hero-card,
+.auth-card {
+    background: var(--card);
+    border: 1px solid rgba(255, 223, 0, .28);
+    border-radius: 24px;
+    padding: 18px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .25)
+}
+
+.hero-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(0, 156, 59, .94), rgba(0, 39, 118, .92));
+    border: 2px solid var(--yellow)
+}
+
+.hero-card h2 {
+    font-size: 34px;
+    margin: 6px 0;
+    color: var(--yellow)
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: .15em
+}
+
+.controls,
+.section-heading {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between
+}
+
+.btn,
+input,
+select {
+    padding: 10px 13px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, .25)
+}
+
+select,
+input {
+    background: #061a38;
+    color: white
+}
+
+.btn {
+    background: #062450;
+    color: white;
+    cursor: pointer;
+    text-decoration: none
+}
+
+.btn-primary {
+    background: #002776
+}
+
+.btn-canary {
+    background: #ffdf00;
+    color: #06213f;
+    font-weight: bold
+}
+
+.btn-danger {
+    background: #a11b1b
+}
+
+.success-text {
+    background: rgba(0, 156, 59, .25);
+    border: 1px solid #ffdf00;
+    padding: 12px;
+    border-radius: 14px
+}
+
+.error-text {
+    color: #fecaca
+}
+
+.muted {
+    opacity: .78
+}
+
+.auth-shell,
+.screen-center {
+    min-height: 80vh;
+    display: grid;
+    place-items: center;
+    padding: 20px
+}
+
+.stack-form {
+    display: grid;
+    gap: 12px
+}
+
+.pitch {
+    position: relative;
+    width: min(100%, 820px);
+    aspect-ratio: 3/4;
+    margin: auto;
+    background: repeating-linear-gradient(180deg, #16883c 0 78px, #0f7432 78px 156px);
+    border: 5px solid white;
+    border-radius: 26px;
+    box-shadow: 0 18px 48px rgba(0, 0, 0, .3)
+}
+
+.pitch-lines {
+    position: absolute;
+    inset: 18px;
+    border: 3px solid rgba(255, 255, 255, .82);
+    border-radius: 18px
+}
+
+.half-line {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 3px;
+    background: rgba(255, 255, 255, .82)
+}
+
+.center-circle {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 3px solid rgba(255, 255, 255, .82);
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.box {
+    position: absolute;
+    left: 50%;
+    width: 56%;
+    height: 18%;
+    transform: translateX(-50%);
+    border: 3px solid rgba(255, 255, 255, .82)
+}
+
+.box.top {
+    top: 0;
+    border-top: 0
+}
+
+.box.bottom {
+    bottom: 0;
+    border-bottom: 0
+}
+
+.shirt-player {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border: 0;
+    background: transparent;
+    color: white;
+    display: grid;
+    place-items: center;
+    gap: 5px;
+    cursor: pointer;
+    z-index: 2;
+    min-width: 76px
+}
+
+.shirt-player.selected {
+    filter: drop-shadow(0 0 14px #ffdf00);
+    z-index: 9
+}
+
+.shirt-body {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 54px;
+    height: 48px;
+    background: #ffdf00;
+    color: #002776;
+    font-weight: 900;
+    border: 3px solid #0b7f35;
+    border-radius: 10px 10px 16px 16px
+}
+
+.sleeve {
+    position: absolute;
+    top: 7px;
+    width: 20px;
+    height: 25px;
+    background: #ffdf00;
+    border: 3px solid #0b7f35
+}
+
+.sleeve.left {
+    left: -16px;
+    transform: skewY(25deg)
+}
+
+.sleeve.right {
+    right: -16px;
+    transform: skewY(-25deg)
+}
+
+.shirt-name {
+    background: rgba(0, 39, 118, .95);
+    border: 2px solid var(--yellow);
+    border-radius: 999px;
+    padding: 3px 8px;
+    font-size: 11px;
+    font-weight: bold;
+    white-space: nowrap
+}
+
+.kit-1978 .sleeve:after {
+    content: '';
+    position: absolute;
+    inset: 3px 2px;
+    background: repeating-linear-gradient(90deg, #0b7f35 0 3px, transparent 3px 6px)
+}
+
+.kit-2010 .shirt-body:before,
+.kit-2022 .shirt-body:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    bottom: 8px;
+    width: 11px;
+    background: #009c3b
+}
+
+.kit-2010 .shirt-body:after,
+.kit-2022 .shirt-body:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 8px;
+    bottom: 8px;
+    width: 11px;
+    background: #009c3b
+}
+
+.kit-2022 .shirt-body {
+    background: radial-gradient(circle, #ffe84a 0 3px, #ffdf00 4px 100%)
+}
+
+.reserve-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 10px
+}
+
+.reserve-item {
+    color: white;
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 223, 0, .18);
+    border-radius: 14px;
+    padding: 12px;
+    text-align: left;
+    display: grid;
+    gap: 4px;
+    cursor: pointer
+}
+
+.player-details {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 14px
+}
+
+.details-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 18px;
+    object-fit: cover;
+    border: 4px solid var(--yellow)
+}
+
+.temperature {
+    font-size: 44px;
+    margin: 8px 0;
+    color: var(--yellow);
+    font-weight: 900
+}
+
+.saved-item,
+.mini-card {
+    display: grid;
+    gap: 8px;
+    margin-top: 10px;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, .18);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, .07)
+}
+
+.players-form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px
+}
+
+.inline-actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap
+}
+
+@media(max-width:1050px) {
+    .layout {
+        grid-template-columns: 1fr
+    }
+
+    .hero-card,
+    .topbar {
+        flex-direction: column;
+        align-items: stretch
+    }
+}
+
+@media(max-width:620px) {
+    .player-details {
+        grid-template-columns: 1fr
+    }
+
+    .shirt-name {
+        max-width: 70px;
+        overflow: hidden;
+        text-overflow: ellipsis
+    }
+
+    .layout {
+        padding: 10px
+    }
+}

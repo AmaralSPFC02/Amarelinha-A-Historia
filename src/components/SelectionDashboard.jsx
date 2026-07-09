@@ -44,6 +44,19 @@ function initialDraft() {
   };
 }
 
+function initialPlayerForm() {
+  return {
+    nome: '',
+    posicao: '',
+    clubeEpoca: '',
+    idadeCopa: '',
+    jogos: '',
+    gols: '',
+    assistencias: '',
+    titular: false
+  };
+}
+
 export default function SelectionDashboard() {
   const [base, setBase] = useState([]);
   const [ano, setAno] = useState('1970');
@@ -53,6 +66,8 @@ export default function SelectionDashboard() {
   const [mine, setMine] = useState([]);
   const [selectedStarter, setSelectedStarter] = useState(null);
   const [form, setForm] = useState(null);
+  const [draftSelection, setDraftSelection] = useState(null);
+  const [playerForm, setPlayerForm] = useState(initialPlayerForm());
   const [message, setMessage] = useState('');
   const [editingStats, setEditingStats] = useState(null);
 
@@ -141,6 +156,20 @@ export default function SelectionDashboard() {
     setForm((old) => ({ ...old, goleiro: { ...old.goleiro, [field]: value } }));
   }
 
+  function updatePlayerFormField(field, value) {
+    setPlayerForm((old) => ({ ...old, [field]: value }));
+  }
+
+  function startNewSelection() {
+    setForm(initialDraft());
+    setDraftSelection(null);
+  }
+
+  function openDraftSelection(selection) {
+    setDraftSelection(selection);
+    setForm(null);
+  }
+
   async function saveSelection(event) {
     event.preventDefault();
 
@@ -161,7 +190,7 @@ export default function SelectionDashboard() {
       }
     };
 
-    await api.createSavedSelection({
+    const created = await api.createSavedSelection({
       nome: form.nome,
       ano: form.ano,
       tecnico: form.tecnico,
@@ -170,8 +199,39 @@ export default function SelectionDashboard() {
     });
 
     setForm(null);
-    setMessage('Seleção criada com sucesso! O restante do elenco pode ser cadastrado depois.');
+    setDraftSelection(created.selecao);
+    setMessage('Seleção criada com sucesso! Clique nela para continuar adicionando jogadores quando quiser.');
     await reloadMine();
+  }
+
+  async function addPlayerToSelection(event) {
+    event.preventDefault();
+    if (!draftSelection) return;
+
+    const jogador = {
+      nome: playerForm.nome,
+      posicao: playerForm.posicao,
+      clubeEpoca: playerForm.clubeEpoca,
+      idadeCopa: playerForm.idadeCopa,
+      titular: playerForm.titular,
+      slot: playerForm.posicao || 'POS',
+      foto: '/jogadores/jogador-padrao.jpg',
+      estatisticasSelecao: {
+        jogos: playerForm.jogos || null,
+        gols: playerForm.gols || null,
+        assistencias: playerForm.assistencias || null
+      }
+    };
+
+    const updated = await api.updateSavedSelection(draftSelection.id, {
+      ...draftSelection,
+      jogadores: [...draftSelection.jogadores, jogador]
+    });
+
+    setDraftSelection(updated.selecao);
+    setMine((old) => old.map((selection) => (selection.id === updated.selecao.id ? updated.selecao : selection)));
+    setPlayerForm(initialPlayerForm());
+    setMessage(`${jogador.nome} foi adicionado à seleção ${updated.selecao.nome}.`);
   }
 
   async function editSelectionName(selection) {
@@ -247,34 +307,6 @@ export default function SelectionDashboard() {
             ))}
           </div>
         </section>
-
-        {form && (
-          <section className="card">
-            <h2>Criar nova seleção</h2>
-            <p className="muted">Para agilizar a apresentação, basta cadastrar um goleiro inicial. O restante do elenco pode ser cadastrado depois.</p>
-            <form onSubmit={saveSelection} className="stack-form">
-              <input required placeholder="Nome da seleção" value={form.nome} onChange={(e) => updateFormField('nome', e.target.value)} />
-              <input placeholder="Ano ou descrição" value={form.ano} onChange={(e) => updateFormField('ano', e.target.value)} />
-              <input placeholder="Técnico" value={form.tecnico} onChange={(e) => updateFormField('tecnico', e.target.value)} />
-
-              <h3>Goleiro inicial</h3>
-              <div className="players-form-grid">
-                <div className="mini-card">
-                  <b>GOL</b>
-                  <input required placeholder="Nome do goleiro" value={form.goleiro.nome} onChange={(e) => updateGoalkeeperField('nome', e.target.value)} />
-                  <input placeholder="Clube" value={form.goleiro.clubeEpoca} onChange={(e) => updateGoalkeeperField('clubeEpoca', e.target.value)} />
-                  <input placeholder="Idade" value={form.goleiro.idadeCopa} onChange={(e) => updateGoalkeeperField('idadeCopa', e.target.value)} />
-                  <input placeholder="Jogos pela Seleção" value={form.goleiro.jogos} onChange={(e) => updateGoalkeeperField('jogos', e.target.value)} />
-                  <input placeholder="Gols pela Seleção" value={form.goleiro.gols} onChange={(e) => updateGoalkeeperField('gols', e.target.value)} />
-                  <input placeholder="Assistências" value={form.goleiro.assistencias} onChange={(e) => updateGoalkeeperField('assistencias', e.target.value)} />
-                </div>
-              </div>
-
-              <button className="btn btn-canary" type="submit">Salvar seleção</button>
-              <button className="btn" type="button" onClick={() => setForm(null)}>Cancelar</button>
-            </form>
-          </section>
-        )}
       </section>
 
       <aside className="side">
@@ -338,21 +370,68 @@ export default function SelectionDashboard() {
         <section className="card">
           <div className="section-heading">
             <h3>Minhas seleções</h3>
-            <button className="btn btn-primary" onClick={() => setForm(initialDraft())} type="button">Criar</button>
+            <button className="btn btn-primary" onClick={startNewSelection} type="button">Criar</button>
           </div>
+
+          {form && (
+            <div className="stack-form" style={{ marginTop: '12px' }}>
+              <p className="muted">Comece apenas com o goleiro. Depois você pode clicar na seleção e continuar adicionando jogadores um por um.</p>
+              <form onSubmit={saveSelection} className="stack-form">
+                <input required placeholder="Nome da seleção" value={form.nome} onChange={(e) => updateFormField('nome', e.target.value)} />
+                <input placeholder="Ano ou descrição" value={form.ano} onChange={(e) => updateFormField('ano', e.target.value)} />
+                <input placeholder="Técnico" value={form.tecnico} onChange={(e) => updateFormField('tecnico', e.target.value)} />
+
+                <h4>Goleiro inicial</h4>
+                <input required placeholder="Nome do goleiro" value={form.goleiro.nome} onChange={(e) => updateGoalkeeperField('nome', e.target.value)} />
+                <input placeholder="Clube" value={form.goleiro.clubeEpoca} onChange={(e) => updateGoalkeeperField('clubeEpoca', e.target.value)} />
+                <input placeholder="Idade" value={form.goleiro.idadeCopa} onChange={(e) => updateGoalkeeperField('idadeCopa', e.target.value)} />
+                <input placeholder="Jogos pela Seleção" value={form.goleiro.jogos} onChange={(e) => updateGoalkeeperField('jogos', e.target.value)} />
+                <input placeholder="Gols pela Seleção" value={form.goleiro.gols} onChange={(e) => updateGoalkeeperField('gols', e.target.value)} />
+                <input placeholder="Assistências" value={form.goleiro.assistencias} onChange={(e) => updateGoalkeeperField('assistencias', e.target.value)} />
+
+                <button className="btn btn-canary" type="submit">Salvar seleção</button>
+                <button className="btn" type="button" onClick={() => setForm(null)}>Cancelar</button>
+              </form>
+            </div>
+          )}
 
           {mine.length === 0 && <p className="muted">Nenhuma seleção criada ainda.</p>}
 
           {mine.map((selection) => (
-            <article className="saved-item" key={selection.id}>
-              <b>{selection.nome}</b>
-              <span>{selection.ano} · {selection.jogadores?.length || 0} jogador(es) cadastrado(s)</span>
-              <div className="inline-actions">
-                <button className="btn" onClick={() => editSelectionName(selection)} type="button">Editar nome</button>
-                <button className="btn btn-danger" onClick={() => deleteSelection(selection.id)} type="button">Excluir</button>
+            <article className={`saved-item ${draftSelection?.id === selection.id ? 'selected' : ''}`} key={selection.id}>
+              <div className="stack-form">
+                <button className="btn btn-primary" onClick={() => openDraftSelection(selection)} type="button">
+                  {selection.nome}
+                </button>
+                <span>{selection.ano} · {selection.jogadores?.length || 0} jogador(es) cadastrado(s)</span>
+                <div className="inline-actions">
+                  <button className="btn" onClick={() => editSelectionName(selection)} type="button">Editar nome</button>
+                  <button className="btn btn-danger" onClick={() => deleteSelection(selection.id)} type="button">Excluir</button>
+                </div>
               </div>
             </article>
           ))}
+
+          {draftSelection && (
+            <div className="stack-form" style={{ marginTop: '12px' }}>
+              <h4>Adicionar jogador</h4>
+              <p className="muted">Você pode parar a qualquer momento. Os cadastros ficam salvos automaticamente na seleção selecionada.</p>
+              <form onSubmit={addPlayerToSelection} className="stack-form">
+                <input required placeholder="Nome do jogador" value={playerForm.nome} onChange={(e) => updatePlayerFormField('nome', e.target.value)} />
+                <input required placeholder="Posição" value={playerForm.posicao} onChange={(e) => updatePlayerFormField('posicao', e.target.value)} />
+                <input placeholder="Clube" value={playerForm.clubeEpoca} onChange={(e) => updatePlayerFormField('clubeEpoca', e.target.value)} />
+                <input placeholder="Idade" value={playerForm.idadeCopa} onChange={(e) => updatePlayerFormField('idadeCopa', e.target.value)} />
+                <input placeholder="Jogos" value={playerForm.jogos} onChange={(e) => updatePlayerFormField('jogos', e.target.value)} />
+                <input placeholder="Gols" value={playerForm.gols} onChange={(e) => updatePlayerFormField('gols', e.target.value)} />
+                <input placeholder="Assistências" value={playerForm.assistencias} onChange={(e) => updatePlayerFormField('assistencias', e.target.value)} />
+                <label className="muted">
+                  <input type="checkbox" checked={playerForm.titular} onChange={(e) => updatePlayerFormField('titular', e.target.checked)} />
+                  {' '}Titular
+                </label>
+                <button className="btn btn-canary" type="submit">Salvar jogador</button>
+              </form>
+            </div>
+          )}
         </section>
       </aside>
     </main>
