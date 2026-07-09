@@ -5,5 +5,12 @@
     "email": "teste@gmail.com",
     "passwordHash": "$2a$10$m.gcifTfBM3SPKOb4Hnwn.hhE/RaFLkq6fNJmYOCOO9JY665PaEc.",
     "createdAt": "2026-07-08T23:17:18.188Z"
+  },
+  {
+    "id": "5ad3f88a-ed5f-421e-8f77-4aac1b409b8e",
+    "usuario": "teste1",
+    "email": "tsete@gmail.com",
+    "passwordHash": "$2a$10$NiBZv/G2kU5wP9M.LMusuuoFW7eT87QS3aQ2Y3ISDa7kMdlFXNlBC",
+    "createdAt": "2026-07-08T23:55:11.695Z"
   }
 ]

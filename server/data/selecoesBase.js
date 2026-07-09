@@ -12,7 +12,8 @@ const selecoesBase = [
         idadeCopa: 32,
         titular: true,
         x: 50,
-        y: 88
+        y: 88,
+        estatisticasSelecao: { gols: 0 }
       },
       {
         nome: "Carlos Alberto",
@@ -22,7 +23,8 @@ const selecoesBase = [
         idadeCopa: 25,
         titular: true,
         x: 82,
-        y: 70
+        y: 70,
+        estatisticasSelecao: { gols: 8 }
       },
       {
         nome: "Brito",
@@ -32,7 +34,8 @@ const selecoesBase = [
         idadeCopa: 30,
         titular: true,
         x: 60,
-        y: 72
+        y: 72,
+        estatisticasSelecao: { gols: 1 }
       },
       {
         nome: "Piazza",
@@ -42,7 +45,8 @@ const selecoesBase = [
         idadeCopa: 26,
         titular: true,
         x: 40,
-        y: 72
+        y: 72,
+        estatisticasSelecao: { gols: 0 }
       },
       {
         nome: "Everaldo",
@@ -52,7 +56,8 @@ const selecoesBase = [
         idadeCopa: 25,
         titular: true,
         x: 18,
-        y: 70
+        y: 70,
+        estatisticasSelecao: { gols: 0 }
       },
       {
         nome: "Clodoaldo",
@@ -62,7 +67,8 @@ const selecoesBase = [
         idadeCopa: 20,
         titular: true,
         x: 55,
-        y: 56
+        y: 56,
+        estatisticasSelecao: { gols: 1 }
       },
       {
         nome: "Gérson",
@@ -72,7 +78,8 @@ const selecoesBase = [
         idadeCopa: 29,
         titular: true,
         x: 45,
-        y: 52
+        y: 52,
+        estatisticasSelecao: { gols: 14 }
       },
       {
         nome: "Jairzinho",
@@ -82,7 +89,8 @@ const selecoesBase = [
         idadeCopa: 25,
         titular: true,
         x: 75,
-        y: 35
+        y: 35,
+        estatisticasSelecao: { gols: 33 }
       },
       {
         nome: "Tostão",
@@ -92,7 +100,8 @@ const selecoesBase = [
         idadeCopa: 23,
         titular: true,
         x: 55,
-        y: 28
+        y: 28,
+        estatisticasSelecao: { gols: 32 }
       },
       {
         nome: "Pelé",
@@ -102,7 +111,8 @@ const selecoesBase = [
         idadeCopa: 29,
         titular: true,
         x: 45,
-        y: 22
+        y: 22,
+        estatisticasSelecao: { gols: 77 }
       },
       {
         nome: "Rivellino",
@@ -112,7 +122,8 @@ const selecoesBase = [
         idadeCopa: 24,
         titular: true,
         x: 25,
-        y: 35
+        y: 35,
+        estatisticasSelecao: { gols: 26 }
       },
       {
         nome: "Marco Antônio",
@@ -120,7 +131,8 @@ const selecoesBase = [
         clubeEpoca: "Fluminense",
         nascimento: "1951-02-06",
         idadeCopa: 19,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 0 }
       },
       {
         nome: "Ado",
@@ -128,7 +140,8 @@ const selecoesBase = [
         clubeEpoca: "Corinthians",
         nascimento: "1946-07-04",
         idadeCopa: 23,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 0 }
       },
       {
         nome: "Roberto",
@@ -136,7 +149,8 @@ const selecoesBase = [
         clubeEpoca: "Botafogo",
         nascimento: "1944-07-31",
         idadeCopa: 25,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 1 }
       },
       {
         nome: "Baldocchi",
@@ -144,7 +158,8 @@ const selecoesBase = [
         clubeEpoca: "Palmeiras",
         nascimento: "1946-03-14",
         idadeCopa: 24,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 0 }
       },
       {
         nome: "Fontana",
@@ -152,7 +167,8 @@ const selecoesBase = [
         clubeEpoca: "Cruzeiro",
         nascimento: "1940-12-31",
         idadeCopa: 29,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 0 }
       },
       {
         nome: "Joel",
@@ -160,7 +176,8 @@ const selecoesBase = [
         clubeEpoca: "Santos",
         nascimento: "1946-09-18",
         idadeCopa: 23,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 0 }
       },
       {
         nome: "Paulo César",
@@ -168,7 +185,8 @@ const selecoesBase = [
         clubeEpoca: "Botafogo",
         nascimento: "1949-06-16",
         idadeCopa: 20,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 8 }
       },
       {
         nome: "Edu",
@@ -176,7 +194,8 @@ const selecoesBase = [
         clubeEpoca: "Santos",
         nascimento: "1949-08-06",
         idadeCopa: 20,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 8 }
       },
       {
         nome: "Dario",
@@ -184,7 +203,8 @@ const selecoesBase = [
         clubeEpoca: "Atlético Mineiro",
         nascimento: "1946-03-04",
         idadeCopa: 24,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 15 }
       },
       {
         nome: "Zé Maria",
@@ -192,7 +212,8 @@ const selecoesBase = [
         clubeEpoca: "Portuguesa",
         nascimento: "1949-05-18",
         idadeCopa: 21,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 0 }
       },
       {
         nome: "Leão",
@@ -200,7 +221,8 @@ const selecoesBase = [
         clubeEpoca: "Palmeiras",
         nascimento: "1949-07-11",
         idadeCopa: 20,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 0 }
       }
     ]
   },
@@ -217,7 +239,8 @@ const selecoesBase = [
         idadeCopa: 28,
         titular: true,
         x: 50,
-        y: 88
+        y: 88,
+        estatisticasSelecao: { gols: 0 }
       },
       {
         nome: "Nelinho",
@@ -227,7 +250,8 @@ const selecoesBase = [
         idadeCopa: 27,
         titular: true,
         x: 80,
-        y: 70
+        y: 70,
+        estatisticasSelecao: { gols: 8 }
       },
       {
         nome: "Oscar",
@@ -237,7 +261,8 @@ const selecoesBase = [
         idadeCopa: 23,
         titular: true,
         x: 58,
-        y: 73
+        y: 73,
+        estatisticasSelecao: { gols: 2 }
       },
       {
         nome: "Amaral",
@@ -247,7 +272,8 @@ const selecoesBase = [
         idadeCopa: 23,
         titular: true,
         x: 42,
-        y: 73
+        y: 73,
+        estatisticasSelecao: { gols: 0 }
       },
       {
         nome: "Toninho",
@@ -257,7 +283,8 @@ const selecoesBase = [
         idadeCopa: 29,
         titular: true,
         x: 20,
-        y: 70
+        y: 70,
+        estatisticasSelecao: { gols: 0 }
       },
       {
         nome: "Toninho Cerezo",
@@ -267,7 +294,8 @@ const selecoesBase = [
         idadeCopa: 23,
         titular: true,
         x: 50,
-        y: 58
+        y: 58,
+        estatisticasSelecao: { gols: 5 }
       },
       {
         nome: "Batista",
@@ -277,7 +305,8 @@ const selecoesBase = [
         idadeCopa: 23,
         titular: true,
         x: 40,
-        y: 55
+        y: 55,
+        estatisticasSelecao: { gols: 0 }
       },
       {
         nome: "Jorge Mendonça",
@@ -287,7 +316,8 @@ const selecoesBase = [
         idadeCopa: 23,
         titular: true,
         x: 65,
-        y: 48
+        y: 48,
+        estatisticasSelecao: { gols: 2 }
       },
       {
         nome: "Dirceu",
@@ -297,7 +327,8 @@ const selecoesBase = [
         idadeCopa: 25,
         titular: true,
         x: 35,
-        y: 48
+        y: 48,
+        estatisticasSelecao: { gols: 7 }
       },
       {
         nome: "Roberto Dinamite",
@@ -307,7 +338,8 @@ const selecoesBase = [
         idadeCopa: 24,
         titular: true,
         x: 55,
-        y: 28
+        y: 28,
+        estatisticasSelecao: { gols: 20 }
       },
       {
         nome: "Gil",
@@ -317,7 +349,8 @@ const selecoesBase = [
         idadeCopa: 27,
         titular: true,
         x: 45,
-        y: 28
+        y: 28,
+        estatisticasSelecao: { gols: 6 }
       },
       {
         nome: "Edinho",
@@ -325,7 +358,8 @@ const selecoesBase = [
         clubeEpoca: "Fluminense",
         nascimento: "1955-06-05",
         idadeCopa: 22,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 3 }
       },
       {
         nome: "Zé Sérgio",
@@ -333,7 +367,8 @@ const selecoesBase = [
         clubeEpoca: "São Paulo",
         nascimento: "1957-03-08",
         idadeCopa: 21,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 5 }
       },
       {
         nome: "Zico",
@@ -341,7 +376,8 @@ const selecoesBase = [
         clubeEpoca: "Flamengo",
         nascimento: "1953-03-03",
         idadeCopa: 25,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 48 }
       },
       {
         nome: "Reinaldo",
@@ -349,7 +385,8 @@ const selecoesBase = [
         clubeEpoca: "Atlético Mineiro",
         nascimento: "1957-01-11",
         idadeCopa: 21,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 14 }
       },
       {
         nome: "Rivellino",
@@ -357,7 +394,8 @@ const selecoesBase = [
         clubeEpoca: "Fluminense",
         nascimento: "1946-01-01",
         idadeCopa: 32,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 26 }
       },
       {
         nome: "Carlos",
@@ -365,7 +403,8 @@ const selecoesBase = [
         clubeEpoca: "Ponte Preta",
         nascimento: "1956-03-04",
         idadeCopa: 22,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 0 }
       },
       {
         nome: "Abel",
@@ -373,7 +412,8 @@ const selecoesBase = [
         clubeEpoca: "Vasco da Gama",
         nascimento: "1952-09-01",
         idadeCopa: 25,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 0 }
       },
       {
         nome: "Polozzi",
@@ -381,7 +421,8 @@ const selecoesBase = [
         clubeEpoca: "Ponte Preta",
         nascimento: "1955-10-01",
         idadeCopa: 22,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 0 }
       },
       {
         nome: "Rodrigues Neto",
@@ -389,7 +430,8 @@ const selecoesBase = [
         clubeEpoca: "Botafogo",
         nascimento: "1949-12-06",
         idadeCopa: 28,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 0 }
       },
       {
         nome: "Chicão",
@@ -397,7 +439,8 @@ const selecoesBase = [
         clubeEpoca: "São Paulo",
         nascimento: "1949-01-30",
         idadeCopa: 29,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 0 }
       },
       {
         nome: "Waldir Peres",
@@ -405,7 +448,8 @@ const selecoesBase = [
         clubeEpoca: "São Paulo",
         nascimento: "1951-01-02",
         idadeCopa: 27,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 0 }
       }
     ]
   },
@@ -422,7 +466,8 @@ const selecoesBase = [
         idadeCopa: 31,
         titular: true,
         x: 50,
-        y: 88
+        y: 88,
+        estatisticasSelecao: { gols: 0 }
       },
       {
         nome: "Leandro",
@@ -432,7 +477,8 @@ const selecoesBase = [
         idadeCopa: 23,
         titular: true,
         x: 82,
-        y: 70
+        y: 70,
+        estatisticasSelecao: { gols: 2 }
       },
       {
         nome: "Oscar",
@@ -442,7 +488,8 @@ const selecoesBase = [
         idadeCopa: 27,
         titular: true,
         x: 58,
-        y: 73
+        y: 73,
+        estatisticasSelecao: { gols: 2 }
       },
       {
         nome: "Luizinho",
@@ -452,7 +499,8 @@ const selecoesBase = [
         idadeCopa: 23,
         titular: true,
         x: 42,
-        y: 73
+        y: 73,
+        estatisticasSelecao: { gols: 2 }
       },
       {
         nome: "Júnior",
@@ -462,7 +510,8 @@ const selecoesBase = [
         idadeCopa: 27,
         titular: true,
         x: 18,
-        y: 70
+        y: 70,
+        estatisticasSelecao: { gols: 6 }
       },
       {
         nome: "Toninho Cerezo",
@@ -472,7 +521,8 @@ const selecoesBase = [
         idadeCopa: 27,
         titular: true,
         x: 45,
-        y: 58
+        y: 58,
+        estatisticasSelecao: { gols: 5 }
       },
       {
         nome: "Falcão",
@@ -482,7 +532,8 @@ const selecoesBase = [
         idadeCopa: 28,
         titular: true,
         x: 55,
-        y: 58
+        y: 58,
+        estatisticasSelecao: { gols: 6 }
       },
       {
         nome: "Sócrates",
@@ -492,7 +543,8 @@ const selecoesBase = [
         idadeCopa: 28,
         titular: true,
         x: 60,
-        y: 42
+        y: 42,
+        estatisticasSelecao: { gols: 22 }
       },
       {
         nome: "Zico",
@@ -502,7 +554,8 @@ const selecoesBase = [
         idadeCopa: 29,
         titular: true,
         x: 40,
-        y: 40
+        y: 40,
+        estatisticasSelecao: { gols: 48 }
       },
       {
         nome: "Éder",
@@ -512,7 +565,8 @@ const selecoesBase = [
         idadeCopa: 25,
         titular: true,
         x: 25,
-        y: 34
+        y: 34,
+        estatisticasSelecao: { gols: 8 }
       },
       {
         nome: "Serginho",
@@ -522,7 +576,8 @@ const selecoesBase = [
         idadeCopa: 28,
         titular: true,
         x: 55,
-        y: 28
+        y: 28,
+        estatisticasSelecao: { gols: 8 }
       },
       {
         nome: "Paulo Isidoro",
@@ -530,7 +585,8 @@ const selecoesBase = [
         clubeEpoca: "Grêmio",
         nascimento: "1953-08-03",
         idadeCopa: 28,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 3 }
       },
       {
         nome: "Paulo Sérgio",
@@ -538,7 +594,8 @@ const selecoesBase = [
         clubeEpoca: "Botafogo",
         nascimento: "1954-07-24",
         idadeCopa: 27,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 0 }
       },
       {
         nome: "Edevaldo",
@@ -546,7 +603,8 @@ const selecoesBase = [
         clubeEpoca: "Fluminense",
         nascimento: "1958-01-28",
         idadeCopa: 24,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 1 }
       },
       {
         nome: "Juninho",
@@ -554,7 +612,8 @@ const selecoesBase = [
         clubeEpoca: "Ponte Preta",
         nascimento: "1958-08-29",
         idadeCopa: 23,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 0 }
       },
       {
         nome: "Edinho",
@@ -562,7 +621,8 @@ const selecoesBase = [
         clubeEpoca: "Fluminense",
         nascimento: "1955-06-05",
         idadeCopa: 27,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 3 }
       },
       {
         nome: "Pedrinho",
@@ -570,7 +630,8 @@ const selecoesBase = [
         clubeEpoca: "Palmeiras",
         nascimento: "1957-10-22",
         idadeCopa: 24,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 1 }
       },
       {
         nome: "Batista",
@@ -578,7 +639,8 @@ const selecoesBase = [
         clubeEpoca: "Grêmio",
         nascimento: "1955-03-08",
         idadeCopa: 27,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 0 }
       },
       {
         nome: "Renato",
@@ -586,7 +648,8 @@ const selecoesBase = [
         clubeEpoca: "São Paulo",
         nascimento: "1957-02-21",
         idadeCopa: 25,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 0 }
       },
       {
         nome: "Roberto Dinamite",
@@ -594,7 +657,8 @@ const selecoesBase = [
         clubeEpoca: "Vasco da Gama",
         nascimento: "1954-04-13",
         idadeCopa: 28,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 20 }
       },
       {
         nome: "Dirceu",
@@ -602,7 +666,8 @@ const selecoesBase = [
         clubeEpoca: "Atlético Madrid",
         nascimento: "1952-06-15",
         idadeCopa: 29,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 7 }
       },
       {
         nome: "Carlos",
@@ -610,7 +675,8 @@ const selecoesBase = [
         clubeEpoca: "Ponte Preta",
         nascimento: "1956-03-04",
         idadeCopa: 26,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 0 }
       }
     ]
   },
@@ -627,7 +693,8 @@ const selecoesBase = [
         idadeCopa: 30,
         titular: true,
         x: 50,
-        y: 88
+        y: 88,
+        estatisticasSelecao: { gols: 0, assistencias: 0 }
       },
       {
         nome: "Maicon",
@@ -637,7 +704,8 @@ const selecoesBase = [
         idadeCopa: 28,
         titular: true,
         x: 82,
-        y: 70
+        y: 70,
+        estatisticasSelecao: { gols: 7, assistencias: 15 }
       },
       {
         nome: "Lúcio",
@@ -647,7 +715,8 @@ const selecoesBase = [
         idadeCopa: 32,
         titular: true,
         x: 58,
-        y: 73
+        y: 73,
+        estatisticasSelecao: { gols: 4, assistencias: 3 }
       },
       {
         nome: "Juan",
@@ -657,7 +726,8 @@ const selecoesBase = [
         idadeCopa: 31,
         titular: true,
         x: 42,
-        y: 73
+        y: 73,
+        estatisticasSelecao: { gols: 7, assistencias: 3 }
       },
       {
         nome: "Michel Bastos",
@@ -667,7 +737,8 @@ const selecoesBase = [
         idadeCopa: 26,
         titular: true,
         x: 18,
-        y: 70
+        y: 70,
+        estatisticasSelecao: { gols: 1, assistencias: 1 }
       },
       {
         nome: "Felipe Melo",
@@ -677,7 +748,8 @@ const selecoesBase = [
         idadeCopa: 26,
         titular: true,
         x: 45,
-        y: 58
+        y: 58,
+        estatisticasSelecao: { gols: 2, assistencias: 2 }
       },
       {
         nome: "Gilberto Silva",
@@ -687,7 +759,8 @@ const selecoesBase = [
         idadeCopa: 33,
         titular: true,
         x: 55,
-        y: 58
+        y: 58,
+        estatisticasSelecao: { gols: 3, assistencias: 4 }
       },
       {
         nome: "Elano",
@@ -697,7 +770,8 @@ const selecoesBase = [
         idadeCopa: 28,
         titular: true,
         x: 65,
-        y: 42
+        y: 42,
+        estatisticasSelecao: { gols: 9, assistencias: 7 }
       },
       {
         nome: "Kaká",
@@ -707,7 +781,8 @@ const selecoesBase = [
         idadeCopa: 28,
         titular: true,
         x: 35,
-        y: 42
+        y: 42,
+        estatisticasSelecao: { gols: 29, assistencias: 25 }
       },
       {
         nome: "Robinho",
@@ -717,7 +792,8 @@ const selecoesBase = [
         idadeCopa: 26,
         titular: true,
         x: 55,
-        y: 28
+        y: 28,
+        estatisticasSelecao: { gols: 28, assistencias: 26 }
       },
       {
         nome: "Luís Fabiano",
@@ -727,7 +803,8 @@ const selecoesBase = [
         idadeCopa: 29,
         titular: true,
         x: 45,
-        y: 28
+        y: 28,
+        estatisticasSelecao: { gols: 28, assistencias: 6 }
       },
       {
         nome: "Gomes",
@@ -735,7 +812,8 @@ const selecoesBase = [
         clubeEpoca: "Tottenham Hotspur (ENG)",
         nascimento: "1981-02-15",
         idadeCopa: 29,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 0, assistencias: 0 }
       },
       {
         nome: "Doni",
@@ -743,7 +821,8 @@ const selecoesBase = [
         clubeEpoca: "AS Roma (ITA)",
         nascimento: "1979-10-22",
         idadeCopa: 30,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 0, assistencias: 0 }
       },
       {
         nome: "Dani Alves",
@@ -751,7 +830,8 @@ const selecoesBase = [
         clubeEpoca: "Barcelona (ESP)",
         nascimento: "1983-05-06",
         idadeCopa: 27,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 8, assistencias: 21 }
       },
       {
         nome: "Luisão",
@@ -759,7 +839,8 @@ const selecoesBase = [
         clubeEpoca: "Benfica (POR)",
         nascimento: "1981-02-13",
         idadeCopa: 29,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 3, assistencias: 1 }
       },
       {
         nome: "Thiago Silva",
@@ -767,7 +848,8 @@ const selecoesBase = [
         clubeEpoca: "AC Milan (ITA)",
         nascimento: "1984-09-22",
         idadeCopa: 25,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 7, assistencias: 3 }
       },
       {
         nome: "Gilberto",
@@ -775,7 +857,8 @@ const selecoesBase = [
         clubeEpoca: "Cruzeiro (BRA)",
         nascimento: "1976-04-25",
         idadeCopa: 34,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 1, assistencias: 5 }
       },
       {
         nome: "Josué",
@@ -783,7 +866,8 @@ const selecoesBase = [
         clubeEpoca: "Wolfsburg (GER)",
         nascimento: "1979-07-19",
         idadeCopa: 30,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 1, assistencias: 0 }
       },
       {
         nome: "Ramires",
@@ -791,7 +875,8 @@ const selecoesBase = [
         clubeEpoca: "Benfica (POR)",
         nascimento: "1987-03-24",
         idadeCopa: 23,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 4, assistencias: 5 }
       },
       {
         nome: "Júlio Baptista",
@@ -799,7 +884,8 @@ const selecoesBase = [
         clubeEpoca: "AS Roma (ITA)",
         nascimento: "1981-10-01",
         idadeCopa: 28,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 5, assistencias: 4 }
       },
       {
         nome: "Kleberson",
@@ -807,7 +893,8 @@ const selecoesBase = [
         clubeEpoca: "Flamengo (BRA)",
         nascimento: "1979-06-19",
         idadeCopa: 30,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 2, assistencias: 6 }
       },
       {
         nome: "Nilmar",
@@ -815,7 +902,8 @@ const selecoesBase = [
         clubeEpoca: "Villarreal (ESP)",
         nascimento: "1984-07-14",
         idadeCopa: 25,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 9, assistencias: 3 }
       },
       {
         nome: "Grafite",
@@ -823,7 +911,8 @@ const selecoesBase = [
         clubeEpoca: "Wolfsburg (GER)",
         nascimento: "1979-04-02",
         idadeCopa: 31,
-        titular: false
+        titular: false,
+        estatisticasSelecao: { gols: 1, assistencias: 1 }
       }
     ]
   },
