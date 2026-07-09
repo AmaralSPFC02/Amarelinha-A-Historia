@@ -1,1 +1,30 @@
-[]
+[
+  {
+    "id": "18554505-5d89-4bdd-bcb7-2907f94c7d0e",
+    "userId": "ba7fde5c-f55f-40cb-b311-a0e4041e99cd",
+    "nome": "Seleção Diniz",
+    "ano": "2026",
+    "tecnico": "Diniz",
+    "formacao": "Rascunho",
+    "jogadores": [
+      {
+        "nome": "teste",
+        "posicao": "GOL",
+        "clubeEpoca": "teste",
+        "idadeCopa": "22",
+        "titular": true,
+        "slot": "GOL",
+        "x": 50,
+        "y": 88,
+        "foto": "/jogadores/jogador-padrao.jpg",
+        "estatisticasSelecao": {
+          "jogos": "22",
+          "gols": "22",
+          "assistencias": "22"
+        }
+      }
+    ],
+    "createdAt": "2026-07-09T12:00:55.414Z",
+    "updatedAt": "2026-07-09T12:00:55.414Z"
+  }
+]
