@@ -3,6 +3,7 @@
 Aplicação web fullstack sobre escalações históricas da Seleção Brasileira em Copas do Mundo.
 
 O sistema permite visualizar seleções brasileiras de 1970, 1978, 1982 e 2010 mostrando os titulares em um campo de futebol, reservas em lista, informações dos jogadores e clima atual da cidade onde ocorreu a final da Copa selecionada.
+
 Também permite o cadastro de novas seleções, tornando-o interessante para quem gosta de imaginar ou simular convocações ou seleções hipotéticas
 
 ---
@@ -149,26 +150,41 @@ Exemplos:
 
 ---
 
-```md
 ## 📷 Screenshots
 
-./screenshots/tela-login.jpg
+Tela de Login:
+<img width="1919" height="911" alt="tela-login" src="https://github.com/user-attachments/assets/4b4ebd04-3cfc-4f19-a629-7dd81447956c" />
 
-./screenshots/tela-cadastro.jpg
 
-./screenshots/time-esquema.jpg
 
-./screenshots/tela-jogador-selecionado.jpg
+Tela de Cadastro:
+<img width="1911" height="903" alt="tela-cadastro" src="https://github.com/user-attachments/assets/809c91b2-fbd5-4fa3-8f91-6cd4efccb26a" />
 
-./screenshots/banco-reservas.jpg
 
-./screenshots/tela-criacao-selecoes.jpg
-```
+
+Tela de Exibição da Seleção:
+<img width="1152" height="866" alt="time-esquema" src="https://github.com/user-attachments/assets/bc327600-853b-47b1-afe2-d9023a206a40" />
+
+
+
+Tela de Jogador Selecionado:
+<img width="1152" height="649" alt="tela-jogador-selecionado" src="https://github.com/user-attachments/assets/57390195-c500-4a48-bb6b-2c19c1ceb5fa" />
+
+
+
+Tela de Banco de Reservas:
+<img width="1152" height="648" alt="banco-reservas" src="https://github.com/user-attachments/assets/6a0b7cad-cbac-4b4e-9ad9-c6e9a7831077" />
+
+
+
+Tela de Criação de Novas Seleções:
+<img width="1152" height="866" alt="tela-criacao-selecoes" src="https://github.com/user-attachments/assets/74591efb-5735-4a48-9402-9bb9cc55e738" />
+
 ---
 
 ## 👥 Integrantes
 
-- Gabriel Santos do Amaral - 2022007164
+- Gabriel Santos do Amaral - 2022007164 / https://github.com/AmaralSPFC02
 
 ---
 
